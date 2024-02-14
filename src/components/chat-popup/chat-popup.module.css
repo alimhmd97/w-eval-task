@@ -1,0 +1,77 @@
+.chat_popup_wrapper{
+    position: fixed;
+    bottom: 90px;
+    right: 50px;
+    border-radius: 8px  8px 0 0 ;
+  
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 1rem;
+    background-color: #fff;
+}
+.popup_msg {
+    max-width: 70%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    position: relative;
+    word-wrap: break-word;
+  }
+  .popup_msg p{
+    margin: 0;
+  }
+  .myMessage {
+    align-self: flex-end;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .otherMessage {
+    align-self: flex-start;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .popup::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  
+  .myMessage::after {
+    top: 10px;
+    right: -9px;
+    border-width: 8px 0 8px 9px;
+    border-color: transparent transparent transparent #5cb85c;
+  }
+  
+  .otherMessage::after {
+    top: 10px;
+    left: -9px;
+    border-width: 8px 9px 8px 0;
+    border-color: transparent #f0f0f0 transparent transparent;
+  }
+  .chat_form_wrapper{
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    padding-top:.5rem;
+  }
+  .chat_input{
+    width: 75%;
+  }
+  .msgs_wrapper{
+    max-height: 300px;
+    overflow-y: scroll;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+  }
+  .close_icon_wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    padding: 0 0 .5rem 0;
+  }
